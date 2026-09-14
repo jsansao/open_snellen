@@ -1,5 +1,12 @@
 # OpenSnellen 👁️✨
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![React](https://img.shields.io/badge/React-18-blue)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.6-blue)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-6.0-646CFF)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC)](https://tailwindcss.com/)
+[![Tests](https://img.shields.io/badge/Vitest-13_Passed-green)](https://vitest.dev/)
+
 **OpenSnellen** is an open-source, clinical-grade digital visual acuity and ophthalmic examination suite built with React 18, TypeScript, Vite, and Tailwind CSS.
 
 It provides calibrated visual acuity charts, specialized ophthalmic examination modules (Astigmatism, Contrast Sensitivity, Ishihara Color Vision, Amsler Grid, Worth 4-Dot, ETDRS), physical screen size calibration, wireless presenter hotkeys, and serverless smartphone remote control via WebRTC data channels.
@@ -121,7 +128,7 @@ open_snellen/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/open_snellen.git
+git clone https://github.com/jsansao/open_snellen.git
 cd open_snellen
 
 # Install dependencies
