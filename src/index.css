@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+}
+
+/* Custom styles for high-contrast optotype rendering */
+.optotype-font {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 900;
+  line-height: 1;
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+
+/* Smooth transitions for chart mode changes */
+.chart-transition {
+  transition: all 0.2s ease-in-out;
+}
