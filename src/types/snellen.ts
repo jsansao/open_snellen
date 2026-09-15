@@ -1,6 +1,6 @@
 export type ExamMode = 'acuity' | 'astigmatism' | 'contrast' | 'ishihara' | 'amsler' | 'worth4dot' | 'etdrs';
 
-export type OptotypeType = 'sloan' | 'snellen' | 'tumbling-e' | 'landolt-c' | 'lea' | 'hotv' | 'etdrs';
+export type OptotypeType = 'sloan' | 'snellen' | 'tumbling-e' | 'landolt-c' | 'lea' | 'hotv' | 'numbers' | 'etdrs';
 
 export type DisplayMode = 'full' | 'line' | 'single';
 

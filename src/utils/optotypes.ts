@@ -5,6 +5,7 @@ export const SLOAN_LETTERS = ['C', 'D', 'E', 'F', 'L', 'N', 'O', 'P', 'Z', 'V'];
 export const SNELLEN_LETTERS = ['E', 'F', 'P', 'T', 'O', 'Z', 'L', 'D', 'C', 'P'];
 export const E_DIRECTIONS = ['0', '90', '180', '270'];
 export const LANDOLT_DIRECTIONS = ['0', '45', '90', '135', '180', '225', '270', '315'];
+export const NUMERIC_OPTOTYPES = ['1', '2', '3', '5', '6', '8', '9'];
 
 export const DEFAULT_ACUITY_LINES: VisualAcuityLine[] = [
   { id: 'line-20-200', snellenFeet: '20/200', snellenMeters: '6/60', logMar: 1.0, decimal: 0.1, optotypes: ['E'] },
@@ -43,6 +44,9 @@ export function generateRandomOptotypes(type: OptotypeType, count: number): stri
     case 'hotv':
       pool = HOTV_LETTERS;
       break;
+    case 'numbers':
+      pool = NUMERIC_OPTOTYPES;
+      break;
     default:
       pool = SLOAN_LETTERS;
   }
@@ -56,7 +60,7 @@ export function generateRandomOptotypes(type: OptotypeType, count: number): stri
 }
 
 /**
- * Ensures line optotypes match selected optotype type (converts letters vs angles vs pediatric symbols)
+ * Ensures line optotypes match selected optotype type (converts letters vs angles vs pediatric symbols vs numbers)
  */
 export function getLineOptotypes(line: VisualAcuityLine, type: OptotypeType, isRandom: boolean): string[] {
   const count = Math.min(Math.max(line.optotypes.length, 1), 8);
@@ -83,6 +87,10 @@ export function getLineOptotypes(line: VisualAcuityLine, type: OptotypeType, isR
 
   if (type === 'hotv') {
     return Array.from({ length: count }, (_, idx) => HOTV_LETTERS[(idx + line.optotypes.length) % HOTV_LETTERS.length]);
+  }
+
+  if (type === 'numbers') {
+    return Array.from({ length: count }, (_, idx) => NUMERIC_OPTOTYPES[(idx + line.optotypes.length) % NUMERIC_OPTOTYPES.length]);
   }
 
   return line.optotypes;

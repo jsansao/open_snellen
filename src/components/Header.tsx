@@ -46,7 +46,7 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
         <div>
           <h1 className="font-bold tracking-tight text-base sm:text-lg flex items-center gap-1.5">
-            OpenSnellen <span className="text-[10px] font-mono font-medium px-1.5 py-0.5 bg-indigo-500/20 text-indigo-400 border border-indigo-500/30 rounded">v1.1</span>
+            OpenSnellen <span className="text-[10px] font-mono font-medium px-1.5 py-0.5 bg-indigo-500/20 text-indigo-400 border border-indigo-500/30 rounded">v1.2</span>
           </h1>
           <p className="text-[11px] text-slate-400 hidden sm:block">Clinical Vision Examination Suite</p>
         </div>
@@ -87,6 +87,7 @@ export const Header: React.FC<HeaderProps> = ({
               <option value="landolt-c" className="bg-slate-900 text-white">Landolt C</option>
               <option value="lea" className="bg-slate-900 text-white">LEA Pediatric Symbols</option>
               <option value="hotv" className="bg-slate-900 text-white">HOTV Chart</option>
+              <option value="numbers" className="bg-slate-900 text-white">Numbers / Digits Chart</option>
             </select>
           </div>
         )}
